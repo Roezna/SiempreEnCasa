@@ -1,7 +1,6 @@
-import Link from "next/link";
 import { ImgProduct } from "../components/Styles";
 import AppLayout from "../components/AppLayout";
-import { DivColumn, Button, DivRow, Text } from "../components/Styles";
+import { DivColumn, DivRow, Text } from "../components/Styles";
 import { colors } from "../components/Styles/colors";
 import ProductsCards from "../components/ProductsCards";
 
@@ -9,8 +8,6 @@ const ProductDetail = ({ product, recommendation }) => {
 
     return (
         <AppLayout>
-            
-            <Link href='/'><Button margin='20px'>Inicio</Button></Link>
             <DivColumn>
                 {product === 'none' ?
                     <Text color={colors.primary}>Producto no encontrado</Text>
@@ -18,7 +15,7 @@ const ProductDetail = ({ product, recommendation }) => {
                 <DivColumn>
                     <DivRow space='space-evenly'>
                         
-                    <DivRow maxWidth='50%'>
+                    <DivRow maxWidth='50%' margin='20px auto'>
                     <ImgProduct src={product.image_url} width='100%' maxWidth='400px'/>
                     </DivRow>
                     <DivColumn maxWidth='50%'>

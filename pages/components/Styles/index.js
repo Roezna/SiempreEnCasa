@@ -6,7 +6,7 @@ export const Container = styled.div`
     flex-direction:column;
     width:100%;
     height:100%;
-    background-color: ${colors.primary}
+    background-color: ${colors.white}
 `
 
 export const Products = styled.div`
@@ -26,13 +26,14 @@ export const CardProduct = styled.div`
     flex-direction: column;
     align-items: center;
     width: 100%;
-    max-width: 250px;
+    max-width: 230px;
     margin : 10px;
     background-color: ${colors.white};
     border-radius: 10px;
     padding:10px;
     text-align:center;
     transition: transform .3s;
+    border: 5px solid ${colors.primary};
 
     &:hover{
         transform: scale(1.02);
@@ -47,6 +48,8 @@ export const DivRow = styled.div`
     width:100%;
     max-width:${props => props.maxWidth};
     background-color: ${props => props.bg}; 
+    margin: ${props => props.margin};
+    margin-top: ${props => props.marginTop};
 `
 export const DivColumn = styled.div`
     display: flex;
@@ -56,6 +59,7 @@ export const DivColumn = styled.div`
     width:100%;
     max-width:${props => props.maxWidth};
     background-color: ${props => props.bg}; 
+    margin: ${props => props.margin};
 `
 
 export const Text = styled.span`
@@ -68,7 +72,7 @@ export const Text = styled.span`
 
 export const Button = styled.button`
     padding:5px 10px;
-    background-color: ${colors.contrast};
+    background-color: ${colors.primary};
     color:white;
     font-size:1.5em;
     border : none;
@@ -77,6 +81,6 @@ export const Button = styled.button`
     margin : ${props => props.margin};
 
     &:hover{
-        background-color: #d11d0c
+        background-color: ${colors.secondary};
     }
 `
