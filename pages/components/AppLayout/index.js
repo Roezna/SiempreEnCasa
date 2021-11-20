@@ -1,26 +1,32 @@
 import Head from 'next/head';
+import Header from '../Header';
 
-const AppLayout = ({children}) => {
+const AppLayout = ({ children }) => {
 
     return (
         <>
-                 
-         <main>
-             {children}
+
+            <main>
+
                 <Head>
                     <title>Siempre En Casa</title>
                 </Head>
-         </main>
-         <style jsx global>{`
+
+                <Header />
+                {children}
+
+            </main>
+
+            <style jsx global>{`
             html, body{
                 padding : 0;
                 margin: 0;
                 font-family: "Poppins", sans-serif;
             }
          `}
-         </style>
+            </style>
 
-         </>
+        </>
     )
 }
 

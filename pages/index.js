@@ -1,7 +1,6 @@
 import ProductsCards from './components/ProductsCards';
 import { Products, Container } from './components/Styles';
 import AppLayout from './components/AppLayout';
-import Header from './components/Header';
 
 const Index = ({ products }) => {
 
@@ -10,12 +9,9 @@ const Index = ({ products }) => {
         <Container>
             <AppLayout>
                
-                <Header />
-
                 <Products>
                     <ProductsCards products={products} />
                 </Products>
-
 
             </AppLayout>
         </Container>
