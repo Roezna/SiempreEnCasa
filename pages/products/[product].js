@@ -3,11 +3,25 @@ import AppLayout from "../components/AppLayout";
 import { DivColumn, DivRow, Text } from "../components/Styles";
 import { colors } from "../components/Styles/colors";
 import ProductsCards from "../components/ProductsCards";
+import Cart from "../components/cart/buttons";
+import { useState, useEffect } from "react";
+
+
 
 const ProductDetail = ({ product, recommendation }) => {
 
+    const cartOnStorage = (typeof window !== 'undefined' && JSON.parse(window.localStorage.getItem('cart'))) || [];
+
+    const [cart, setCart] = useState(cartOnStorage !== [] ? cartOnStorage : []);
+ 
+    useEffect(()=>{
+      
+          localStorage.setItem('cart', JSON.stringify(cart));
+    
+    },[cart])
+
     return (
-        <AppLayout>
+        <AppLayout cart={cart}>
             <DivColumn>
                 {product === 'none' ?
                     <Text color={colors.primary}>Producto no encontrado</Text>
@@ -23,13 +37,18 @@ const ProductDetail = ({ product, recommendation }) => {
                         {product.name}
                     </Text>
                     <Text size='2.5em' color={colors.contrast}>${product.total_price}</Text>
-                    <Text size='1em'>Precio por unidad: ${product.price_per_unit}</Text>
+                    <Text size='14px'>Precio por unidad: ${product.price_per_unit}</Text>
+                    
+                    <DivRow margin='20px auto'>
+                    <Cart cart={cart} setCart={setCart} product={product}/>
+                    </DivRow>
                     </DivColumn>
                     </DivRow>
-                    
+
+                   
                     <Text size='2em' color={colors.contrast} margin='20px auto'>Te recomendamos</Text>
                     <DivRow bg={colors.primary}>
-                        {recommendation && <ProductsCards products={recommendation}/>}
+                        {recommendation && <ProductsCards products={recommendation} cart={cart} setCart={setCart}/>}
                     </DivRow>
 
                 </DivColumn>
