@@ -21,7 +21,7 @@ const ProductDetail = ({ product, recommendation }) => {
     },[cart])
 
     return (
-        <AppLayout cart={cart}>
+        <AppLayout cart={cart} setCart={setCart}>
             <DivColumn>
                 {product === 'none' ?
                     <Text color={colors.primary}>Producto no encontrado</Text>
