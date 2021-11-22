@@ -1,5 +1,16 @@
-import styled from 'styled-components';
+import styled, { css, keyframes } from 'styled-components';
 import { colors } from './colors';
+
+
+const rightToLeft = keyframes`
+0% {
+  right : -100%;
+}
+
+100%{
+    right:0;
+}
+`;
 
 export const Container = styled.div`
     display:flex;
@@ -50,6 +61,14 @@ export const DivRow = styled.div`
     background-color: ${props => props.bg}; 
     margin: ${props => props.margin};
     margin-top: ${props => props.marginTop};
+    align-items:${props => props.align};
+    position:${props => props.position};
+    height:${props => props.height};
+    color:${props => props.color};
+    right:${props => props.right};
+    z-index:${props => props.capa};
+    animation:${props => props.animation === 'true' && css`${rightToLeft} 0.5s ease`};
+    
 `
 export const DivColumn = styled.div`
     display: flex;
@@ -71,7 +90,7 @@ export const Text = styled.span`
 `
 
 export const Button = styled.button`
-    padding:5px 10px;
+    padding:0px 10px;
     background-color: ${colors.primary};
     color:white;
     font-size:1.5em;
@@ -79,8 +98,11 @@ export const Button = styled.button`
     border-radius: 3px;
     cursor: pointer;
     margin : ${props => props.margin};
+    font-size : ${props => props.size};
+
 
     &:hover{
         background-color: ${colors.secondary};
     }
+
 `

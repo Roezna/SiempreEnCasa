@@ -3,9 +3,18 @@ import { colors } from "./Styles/colors";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import { faDolly, faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
+import { useState } from "react";
+import ShowCart from "./cart/showCart";
 
-const Header = () => {
+const Header = ({cartActually}) => {
 
+    const [show, setShow] = useState(false)
+
+    const showSideCart = () => {
+
+        show === false ? setShow(true) : setShow(false)
+
+    }
  
     return (
         <DivRow bg={colors.contrast} space='space-evenly'>
@@ -14,8 +23,9 @@ const Header = () => {
             </DivRow>
             <DivRow maxWidth='300px' margin='20px'>
             <Link href='/'><Button margin='0 10px' border='1px solid white'>Inicio</Button></Link>
-            <Link href='/cart/'><Button margin='0 10px' border='1px solid white'><FontAwesomeIcon icon={faShoppingCart}/></Button></Link>
+            <Button margin='0 10px' border='1px solid white' onClick={() => showSideCart()}><FontAwesomeIcon icon={faShoppingCart}/><Text color='#74e95e'>{' ' + cartActually.length}</Text></Button>
             </DivRow>
+            {show && <ShowCart cart={cartActually} openClose={showSideCart}/>}
         </DivRow>
     )
 
