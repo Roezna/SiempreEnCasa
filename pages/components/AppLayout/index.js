@@ -3,7 +3,7 @@ import Header from '../Header';
 
 const AppLayout = ({ children, cart, setCart }) => {
 
-    return (
+    return ( 
         <>
 
             <main>
