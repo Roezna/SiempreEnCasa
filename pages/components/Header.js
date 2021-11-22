@@ -6,7 +6,7 @@ import Link from "next/link";
 import { useState } from "react";
 import ShowCart from "./cart/showCart";
 
-const Header = ({cartActually}) => {
+const Header = ({cartActually, setCart}) => {
 
     const [show, setShow] = useState(false)
 
@@ -23,9 +23,9 @@ const Header = ({cartActually}) => {
             </DivRow>
             <DivRow maxWidth='300px' margin='20px'>
             <Link href='/'><Button margin='0 10px' border='1px solid white'>Inicio</Button></Link>
-            <Button margin='0 10px' border='1px solid white' onClick={() => showSideCart()}><FontAwesomeIcon icon={faShoppingCart}/><Text color='#74e95e'>{' ' + cartActually.length}</Text></Button>
+            <Button margin='0 10px' border='1px solid white' onClick={() => showSideCart()}><FontAwesomeIcon icon={faShoppingCart}/><Text color={colors.lightBlue}>{' ' + cartActually.length}</Text></Button>
             </DivRow>
-            {show && <ShowCart cart={cartActually} openClose={showSideCart}/>}
+            {show && <ShowCart cart={cartActually} setCart={setCart} openClose={showSideCart}/>}
         </DivRow>
     )
 

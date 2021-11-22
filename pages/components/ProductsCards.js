@@ -20,7 +20,7 @@ const ProductsCards = ({products, cart, setCart}) => {
                     <Text size='1em' margin='15px' color={colors.secondary}>
                         {unity.name}
                     </Text>
-                    <Text size='2em' color={colors.contrast}>${unity.total_price}</Text>
+                    <Text size='2em' color={colors.orange}>${unity.total_price}</Text>
                    <Cart cart={cart} setCart={setCart} product={unity}/>
                 </CardProduct>
                 </Link>
