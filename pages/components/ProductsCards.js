@@ -3,7 +3,6 @@ import { Text } from "./Styles";
 import { colors } from "./Styles/colors";
 import Cart from "./cart/buttons";
 import Link from "next/link";
-import Image from '../components/image/notFound.jpg';
 
 
 const ProductsCards = ({products, cart, setCart, categorie}) => {
@@ -24,7 +23,7 @@ const ProductsCards = ({products, cart, setCart, categorie}) => {
                         <Link href={`/products/${unity.product_id}`} key={index + i}>
                         <CardProduct maxWidth='250px'>
                             
-                            <ImgProduct src={unity.image_url || Image} width='100%'/>
+                            <ImgProduct src={unity.image_url} width='100%'/>
                             <Text size='1em' margin='15px' color={colors.secondary}>
                                 {unity.name}
                             </Text>
