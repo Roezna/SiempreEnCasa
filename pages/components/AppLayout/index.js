@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import Header from '../Header';
 
-const AppLayout = ({ children, cart }) => {
+const AppLayout = ({ children, cart, setCart }) => {
 
     return (
         <>
@@ -12,7 +12,7 @@ const AppLayout = ({ children, cart }) => {
                     <title>Siempre En Casa</title>
                 </Head>
         
-                <Header cartActually={cart}/>
+                <Header cartActually={cart} setCart={setCart}/>
                 {children}
 
             </main>

@@ -19,7 +19,7 @@ const Index = ({ products }) => {
     return (
 
         <Container>
-            <AppLayout cart={cart}>
+            <AppLayout cart={cart} setCart={setCart}>
                
                 <Products>
                     <ProductsCards products={products} cart={cart} setCart={setCart}/>

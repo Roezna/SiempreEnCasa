@@ -29,14 +29,14 @@ const ProductDetail = ({ product, recommendation }) => {
                 <DivColumn>
                     <DivRow space='space-evenly'>
                         
-                    <DivRow maxWidth='50%' margin='20px auto'>
-                    <ImgProduct src={product.image_url} width='100%' maxWidth='400px'/>
+                    <DivRow maxWidth='400px' margin='20px auto'>
+                    <ImgProduct src={product.image_url} width='100%'/>
                     </DivRow>
-                    <DivColumn maxWidth='50%'>
+                    <DivColumn maxWidth='700px'>
                     <Text size='2em' margin='15px' color={colors.secondary}>
                         {product.name}
                     </Text>
-                    <Text size='2.5em' color={colors.contrast}>${product.total_price}</Text>
+                    <Text size='2.5em' color={colors.orange}>${product.total_price}</Text>
                     <Text size='14px'>Precio por unidad: ${product.price_per_unit}</Text>
                     
                     <DivRow margin='20px auto'>
@@ -47,7 +47,7 @@ const ProductDetail = ({ product, recommendation }) => {
 
                    
                     <Text size='2em' color={colors.contrast} margin='20px auto'>Te recomendamos</Text>
-                    <DivRow bg={colors.primary}>
+                    <DivRow bg={colors.contrast}>
                         {recommendation && <ProductsCards products={recommendation} cart={cart} setCart={setCart}/>}
                     </DivRow>
 

@@ -10,7 +10,7 @@ const Cart = ({product, cart, setCart}) => {
    
          if (e.target.name === 'plus') {
    
-            const addAmount = false;
+            let addAmount = false;
             const cartCopy = [...cart]
             cartCopy.length > 0 && cartCopy.map(element => {
                if (element.product['product_id'] === product.product_id) {
@@ -29,7 +29,7 @@ const Cart = ({product, cart, setCart}) => {
          }
          if (e.target.name === 'minus') {
    
-            const quitAmount = false;
+            let quitAmount = false;
             const newCart = [...cart]
             newCart.length > 0 && newCart.map((element, indice) => {
                if (element.product['product_id'] === product.product_id) {
@@ -63,9 +63,9 @@ const Cart = ({product, cart, setCart}) => {
       }
   
       const cartAmount = () => {
-         const amount = 'Llevalo!';
+         let amount = 'Llevalo!';
 
-         cart.forEach(prod => {
+         cart && cart.forEach(prod => {
             if(prod.product.product_id === product.product_id) amount = prod.amount
          });
          
@@ -75,9 +75,9 @@ const Cart = ({product, cart, setCart}) => {
 
    return (
       <DivRow space='center' marginTop='10px' align='center'>
-         <Button name='plus' onClick={(e) => handleCart(e, product)} size='1.4em'>+</Button>
-         <Text size='1.2em' color={colors.primary} margin='0 10px'>{cartAmount()}</Text>
-         <Button name='minus' onClick={(e) => handleCart(e, product)}  size='1.4em'>-</Button> 
+         <Button name='plus' onClick={(e) => handleCart(e, product)} size='1.5em'>+</Button>
+         <Text size='1.2em' color={colors.lightBlue} margin='0 10px'>{cartAmount()}</Text>
+         <Button name='minus' onClick={(e) => handleCart(e, product)}  size='1.5em'>-</Button> 
       </DivRow>
    )
 

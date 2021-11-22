@@ -12,6 +12,16 @@ const rightToLeft = keyframes`
 }
 `;
 
+const leftToRight = keyframes`
+0% {
+  right : 0%;
+}
+
+100%{
+    right:-100%;
+}
+`;
+
 export const Container = styled.div`
     display:flex;
     flex-direction:column;
@@ -31,6 +41,7 @@ export const ImgProduct = styled.img`
     width: ${props => props.width};
     max-width: ${props => props.maxWidth};
     src: url('${props => props.src}');
+    margin: ${props => props.margin};
 `
 export const CardProduct = styled.div`
     display : flex;
@@ -67,14 +78,29 @@ export const DivRow = styled.div`
     color:${props => props.color};
     right:${props => props.right};
     z-index:${props => props.capa};
-    animation:${props => props.animation === 'true' && css`${rightToLeft} 0.5s ease`};
+    animation:${props => props.animation === true ? css`${rightToLeft} 1s ease` : css`${leftToRight} 1s ease`};
+    overflow-y: ${props => props.overflow};
+
+    &::-webkit-scrollbar {
+        width: 15px; 
+      }
+      
+      &::-webkit-scrollbar-track {
+        background: ${colors.primary}; 
+      }
+      
+      &::-webkit-scrollbar-thumb {
+        background-color: ${colors.contrast}; 
+        border-radius: 20px; 
+        border: 3px solid ${colors.primary}; 
+      }
     
 `
 export const DivColumn = styled.div`
     display: flex;
     flex-direction:column;
-    align-items:center;
-    justify-content: center;
+    align-items: ${props => props.align ? props.align : 'center'};
+    justify-content: ${props => props.space ? props.space : 'center'};
     width:100%;
     max-width:${props => props.maxWidth};
     background-color: ${props => props.bg}; 
@@ -90,9 +116,9 @@ export const Text = styled.span`
 `
 
 export const Button = styled.button`
-    padding:0px 10px;
-    background-color: ${colors.primary};
-    color:white;
+    padding: ${props => props.padding ? props.padding : '0px 10px'};
+    background-color: ${props => props.bg ? props.bg : colors.primary};
+    color:${props => props.color ? props.color : 'white'};
     font-size:1.5em;
     border : none;
     border-radius: 3px;
@@ -102,7 +128,7 @@ export const Button = styled.button`
 
 
     &:hover{
-        background-color: ${colors.secondary};
+        background-color: ${props => props.hoverColor ? props.hoverColor : colors.secondary};
     }
 
 `
