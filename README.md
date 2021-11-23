@@ -16,6 +16,7 @@ Luego de instalar las dependencias con ```npm install```, ejecutar ```npm start`
 En el HOME, podrás visualizar los productos, filtrar por categorias y agregar al carrito.
 
 <img width="946" alt="home-sec" src="https://user-images.githubusercontent.com/84095970/143065679-72c4eb6e-00ca-4e60-a2ad-0997f14372ae.PNG">
+<img width="947" alt="filtro-sec" src="https://user-images.githubusercontent.com/84095970/143067420-47514a1f-2683-43a1-bf55-8734b63f134d.PNG">
 
 Presionando el carrito se desplegará el mismo con los productos incluidos, su cantidad, la posibilidad de seguir aumentando o quitando y un boton con el total a pagar.
 
