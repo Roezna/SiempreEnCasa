@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import Header from '../Header';
-
 const AppLayout = ({ children, cart, setCart }) => {
 
     return ( 
@@ -10,9 +9,11 @@ const AppLayout = ({ children, cart, setCart }) => {
 
                 <Head>
                     <title>Siempre En Casa</title>
+                    
                 </Head>
-        
                 <Header cartActually={cart} setCart={setCart}/>
+            
+
                 {children}
 
             </main>
@@ -22,6 +23,9 @@ const AppLayout = ({ children, cart, setCart }) => {
                 padding : 0;
                 margin: 0;
                 font-family: "Poppins", sans-serif;
+            }
+            main{
+              width:100%;
             }
          `}
             </style>
