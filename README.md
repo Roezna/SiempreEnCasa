@@ -1,4 +1,5 @@
-### Challenge "Siempre en casa"
+## Challenge "Siempre en casa"
+
 
 ## Comenzar
 Luego de instalar las dependencias con ```npm install```, ejecutar ```npm start``` para iniciar el servidor
