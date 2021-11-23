@@ -6,8 +6,11 @@ Luego de instalar las dependencias con ```npm install```, ejecutar ```npm start`
 
 ### App
 En el HOME, podrás visualizar los productos, filtrar por categorias y agregar al carrito.
-![image](https://user-images.githubusercontent.com/84095970/143064268-0bc3aa52-e28e-4cf5-81b1-da5026cba002.png)
+<img width="946" alt="home-sec" src="https://user-images.githubusercontent.com/84095970/143065679-72c4eb6e-00ca-4e60-a2ad-0997f14372ae.PNG">
 
 Presionando el carrito se desplegará el mismo con los productos incluidos, su cantidad, la posibilidad de seguir aumentando o quitando y un boton con el total a pagar.
-![image](https://user-images.githubusercontent.com/84095970/143064756-5dc332bf-4e0f-447d-8731-73f96d6a1061.png)
+<img width="948" alt="cart-sec" src="https://user-images.githubusercontent.com/84095970/143065693-9abe0009-de41-4076-a9e4-a171fe9a69ee.PNG">
 
+Seleccionando la card de cualquier producto en home, te enviará a la pagina de detalle del mismo, donde podras agregarlo al carrito y ademas podrás visualizar las recomendaciones relacionadas al producto principal. 
+<img width="948" alt="detail-sec" src="https://user-images.githubusercontent.com/84095970/143065708-a69b682f-85dc-4cb5-8a91-460cad850176.PNG">
+<img width="948" alt="recomendacion-sec" src="https://user-images.githubusercontent.com/84095970/143065751-37fa38b6-475e-4a63-b1e7-91aace190115.PNG">
