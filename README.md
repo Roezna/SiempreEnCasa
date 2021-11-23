@@ -10,7 +10,7 @@ Luego de instalar las dependencias con ```npm install```, ejecutar ```npm start`
 * Styled-components
 * CSS
 
-(Aún me encuentro acostumbrandome con TS, pero me sentí mas cómodo para este desarrollo en JS debido a que investigue Next.js ya que es la primera vez que creo una app con este framework de react.)
+(Aún me encuentro acostumbrandome con TS, pero me sentí mas cómodo para este desarrollo en JS debido a que estuve investigando Next.js ya que es la primera vez que creo una app con este framework de react.)
 
 ### App
 En el HOME, podrás visualizar los productos, filtrar por categorias y agregar al carrito.
