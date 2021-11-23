@@ -1,9 +1,11 @@
-import { ImgProduct } from "../components/Styles";
-import AppLayout from "../components/AppLayout";
-import { DivColumn, DivRow, Text } from "../components/Styles";
-import { colors } from "../components/Styles/colors";
-import ProductsCards from "../components/ProductsCards";
-import Cart from "../components/cart/buttons";
+import { ImgProduct } from "../../components/Styles/ImgProduct";
+import AppLayout from "../../components/AppLayout";
+import { DivColumn } from "../../components/Styles/DivColumn";
+import { DivRow } from "../../components/Styles/DivRow";
+import { Text } from "../../components/Styles/Text";
+import { colors } from "../../components/Styles/colors";
+import ProductsCards from "../../components/ProductsCards";
+import Cart from "../../components/cart/buttons";
 import { useState, useEffect } from "react";
 
 

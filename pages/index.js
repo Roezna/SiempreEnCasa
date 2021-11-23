@@ -1,8 +1,9 @@
-import ProductsCards from './components/ProductsCards';
-import { Products, Container, DivRow } from './components/Styles';
-import AppLayout from './components/AppLayout';
+import ProductsCards from '../components/ProductsCards';
+import AppLayout from '../components/AppLayout';
 import { useState, useEffect } from "react";
-import Categories from './components/Categories';
+import Categories from '../components/Categories';
+import { DivColumn } from '../components/Styles/DivColumn';
+import { DivRow } from '../components/Styles/DivRow';
 
 
 const Index = ({ products, categories }) => {
@@ -20,24 +21,23 @@ const Index = ({ products, categories }) => {
 
     return (
 
-        <Container>
+        <DivColumn bg='white'>
+           
             <AppLayout cart={cart} setCart={setCart}>
+            
 
-               <DivRow space='space-around'>
+               <DivRow>
                 <Categories categories={categories} categorie={categorie} setCategorie={setCategorie}/>
-                <Products>
+                <DivRow space='space-evenly'>
                     <ProductsCards products={products} cart={cart} setCart={setCart} categorie={categorie}/>
-                </Products>
+                </DivRow>
                 </DivRow>
 
             </AppLayout>
-        </Container>
-
-
+        </DivColumn>
+        
 
     )
-
-
 
 }
 

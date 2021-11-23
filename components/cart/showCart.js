@@ -1,5 +1,9 @@
 import { useEffect, useState } from "react";
-import { DivRow, Text, Button, DivColumn, ImgProduct } from "../Styles";
+import { DivRow } from "../Styles/DivRow";
+import { Text } from "../Styles/Text";
+import { Button } from "../Styles/Button";
+import { ImgProduct } from "../Styles/ImgProduct";
+import { DivColumn } from "../Styles/DivColumn";
 import { colors } from "../Styles/colors";
 import Cart from "./buttons";
 

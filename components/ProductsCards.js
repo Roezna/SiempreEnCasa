@@ -1,5 +1,6 @@
-import { ImgProduct, CardProduct } from "./Styles";
-import { Text } from "./Styles";
+import { CardProduct } from "./Styles/CardProduct";
+import { Text } from "./Styles/Text";
+import { ImgProduct } from "./Styles/ImgProduct";
 import { colors } from "./Styles/colors";
 import Cart from "./cart/buttons";
 import Link from "next/link";

@@ -1,4 +1,7 @@
-import { DivRow, DivColumn, Text, Button } from "./Styles"
+import { DivRow } from "./Styles/DivRow";
+import { DivColumn } from "./Styles/DivColumn";
+import { Text } from "./Styles/Text";
+import { Button } from "./Styles/Button";
 import { colors } from "./Styles/colors";
 
 

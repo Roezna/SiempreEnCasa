@@ -1,4 +1,6 @@
-import { DivRow, Text, Button } from "./Styles";
+import { Button } from "./Styles/Button";
+import { DivRow } from "./Styles/DivRow";
+import { Text } from "./Styles/Text";
 import { colors } from "./Styles/colors";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import { faDolly, faShoppingCart } from "@fortawesome/free-solid-svg-icons";
