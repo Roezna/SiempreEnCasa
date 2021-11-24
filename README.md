@@ -1,34 +1,28 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Challenge "Siempre en casa"
 
-## Getting Started
 
-First, run the development server:
+## Comenzar
+Luego de instalar las dependencias con ```npm install```, ejecutar ```npm start``` para iniciar el servidor
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## Tecnologias
+* Javascript
+* React / Next
+* Styled-components
+* CSS
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+(Aún me encuentro acostumbrandome con TS, pero me sentí mas cómodo para este desarrollo en JS debido a que estuve investigando Next.js ya que es la primera vez que creo una app con este framework de react.)
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+### App
+En el HOME, podrás visualizar los productos, filtrar por categorias y agregar al carrito.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+<img width="946" alt="home-sec" src="https://user-images.githubusercontent.com/84095970/143065679-72c4eb6e-00ca-4e60-a2ad-0997f14372ae.PNG">
+<img width="947" alt="filtro-sec" src="https://user-images.githubusercontent.com/84095970/143067420-47514a1f-2683-43a1-bf55-8734b63f134d.PNG">
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Presionando el carrito se desplegará el mismo con los productos incluidos, su cantidad, la posibilidad de seguir aumentando o quitando y un boton con el total a pagar.
 
-## Learn More
+<img width="948" alt="cart-sec" src="https://user-images.githubusercontent.com/84095970/143065693-9abe0009-de41-4076-a9e4-a171fe9a69ee.PNG">
 
-To learn more about Next.js, take a look at the following resources:
+Seleccionando la card de cualquier producto en home, te enviará a la pagina de detalle del mismo, donde podras agregarlo al carrito y ademas podrás visualizar las recomendaciones relacionadas al producto principal. 
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+<img width="948" alt="detail-sec" src="https://user-images.githubusercontent.com/84095970/143065708-a69b682f-85dc-4cb5-8a91-460cad850176.PNG">
+<img width="948" alt="recomendacion-sec" src="https://user-images.githubusercontent.com/84095970/143065751-37fa38b6-475e-4a63-b1e7-91aace190115.PNG">
